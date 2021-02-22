@@ -1,0 +1,7 @@
+altug:tanaltay:12333312:atanaltay@sabanciuniv.edu:feneryolu:friends
+mehmet:erik:334432234:mehmet@sabanciuniv.edu:kadikoy:friends
+ismail:husrev:33445443:ismail@sabanciuniv.edu:besiktas:business
+kenan:isik:2333445:atanaltay@sabanciuniv.edu:feneryolu:other
+cemal:tanaltay:12333312:cemal@sabanciuniv.edu:beykoz:family
+ahmet:keskin:12333312:keskin@sabanciuniv.edu:fatih:friends
+Ahmet:Yahsi:23423:ahmet@ahmet.com:iskenderun:business
