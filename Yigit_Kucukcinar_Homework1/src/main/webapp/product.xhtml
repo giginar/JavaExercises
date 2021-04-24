@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h1 align="center">Create Random Product</h1>
+		<p align="center">
+			<h:commandButton action="#{productBean.dummyData()}"
+				value="Create Products" />
+		</p>
+		<a href="productlist.xhtml">All Products</a> <br /><br />
+		<a href="productlist2.xhtml">Choose Product by Category</a>
+	</h:form>
+</body>
+</html>
