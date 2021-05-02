@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h1 align="center">Update Product</h1>
+		
+		<table cellpadding="2" cellspacing="2" border="2" align="center">
+			<tr>
+				<td>Product Name</td>
+				<td><h:inputText value="#{productBean.nameToUpdate}" /></td>
+			</tr>
+			<tr>
+				<td>Product Price</td>
+				<td><h:inputText value="#{productBean.priceToUpdate}" /></td>
+			</tr>
+			<tr>
+				<td>Product Stock</td>
+				<td><h:inputText value="#{productBean.stockToUpdate}" /></td>
+			</tr>
+		</table>
+		<p align="center">
+			<h:outputLabel value="Category:" for="txtcategory" />
+			<h:selectOneMenu value="#{productBean.categoryId}">
+				<f:selectItems var="category"
+					value="#{productListBean.allCategories}"
+					itemValue="#{category.id}" itemLabel="#{category.name}">
+				</f:selectItems>
+			</h:selectOneMenu>
+		</p>
+		
+		
+		<p align="center">
+			<h:commandButton action="#{productBean.updateProduct()}"
+				value="Save" />
+		</p>
+		<p align="center">
+			<h:commandButton action="#{productBean.deleteProduct(productBean.idToUpdate)}"
+				value="Delete" />
+		</p>
+	</h:form>
+</body>
+</html>

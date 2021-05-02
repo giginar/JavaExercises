@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<p align="center">
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Name:" for="txtname" />
+			<h:inputText value="#{customerLoginBean.customer.name}" id="txtname" required="true" requiredMessage="*" />
+			<h:message for="txtname" />
+
+			<h:outputLabel value="Lastname:" for="txtlastname" />
+			<h:inputText value="#{customerLoginBean.customer.lastname}" id="txtlastname" required="true" requiredMessage="*" />
+			<h:message for="txtlastname" />
+
+			<h:outputLabel value="Password:" for="txtpassword" />
+			<h:inputSecret value="#{customerLoginBean.customer.password}" id="txtpassword" required="true" requiredMessage="*" />
+			<h:message for="txtpassword" />
+			
+			<h:outputLabel value="Phone:" for="txtphone" />
+			<h:inputText value="#{customerLoginBean.customer.phone}" id="txtphone" required="true" requiredMessage="*" />
+			<h:message for="txtphone" />
+			
+			<h:outputLabel value="Email:" for="txtemail" />
+			<h:inputText value="#{customerLoginBean.customer.email}" id="txtemail" required="true" requiredMessage="*" />
+			<h:message for="txtemail" />
+			
+			<h:outputText />
+			<h:commandButton action="#{customerLoginBean.saveCustomer()}" value="Save">
+			</h:commandButton>
+			<h:outputText />
+		</h:panelGrid>
+		</p>
+		<p align="center">
+		<a href="productlist.xhtml">All Products</a>
+		<br />
+		<br />
+		</p>
+		<p align="center">
+		<a href="categorylist.xhtml">All Categories</a>
+		<br />
+		<br />
+		</p>
+		<p align="center">
+		<a href="product.xhtml">Main Page</a>
+		<br />
+		<br />
+		</p>
+	</h:form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Name:" for="txtname" />
+			<h:inputText value="#{productBean.product.name}" id="txtname" required="true" requiredMessage="*" />
+			<h:message for="txtname" />
+
+			<h:outputLabel value="Price:" for="txtprice" />
+			<h:inputText value="#{productBean.product.price}" id="txtprice" required="true" requiredMessage="*" />
+			<h:message for="txtprice" />
+
+			<h:outputLabel value="Stock:" for="txtstock" />
+			<h:inputText value="#{productBean.product.stock}" id="txtstock" required="true" requiredMessage="*" />
+			<h:message for="txtstock" />
+			
+			<h:outputLabel value="Category:" for="txtcategory" />
+			<h:selectOneMenu value="#{productBean.categoryId}">
+				<f:selectItems var="category"
+					value="#{productListBean.allCategories}"
+					itemValue="#{category.id}" itemLabel="#{category.name}">
+				</f:selectItems>
+			</h:selectOneMenu>
+
+			<h:outputText />
+			<h:commandButton action="#{productBean.saveProduct()}" value="Save">
+			
+			</h:commandButton>
+			<h:outputText />
+		</h:panelGrid>
+		<p align="center">
+		<a href="/Yigit_Kucukcinar_Hw2/productlist.xhtml">All Products</a> <br />
+		</p>
+		<p align="center">
+		<a href="/Yigit_Kucukcinar_Hw2/categorylist.xhtml">All Categories</a> <br />
+		</p>
+		<p align="center">
+		<a href="/Yigit_Kucukcinar_Hw2/product.xhtml">Main Page</a> <br /><br />
+		</p>
+	</h:form>
+</body>
+</html>

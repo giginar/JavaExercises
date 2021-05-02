@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+		<h:form>
+		
+			<h:panelGrid columns="3">
+			<p align="center">
+				<h:outputLabel value="Name:" for="txtname" />
+				<h:inputText value="#{categoryBean.newCategory.name}" id="txtname" required="true" requiredMessage="*" />
+				<h:message for="txtname" />
+	
+				<h:outputLabel value="Description:" for="txtdescription" />
+				<h:inputText value="#{categoryBean.newCategory.description}" id="txtdescription" required="true" requiredMessage="*" />
+				<h:message for="txtdescription" />
+	
+				<h:outputText />
+				<h:commandButton action="#{categoryBean.saveCategory()}" value="Save">
+				</h:commandButton>
+				<h:outputText />
+				</p>
+			</h:panelGrid>
+		
+			<p align="center">
+			<a href="/Yigit_Kucukcinar_Hw2/productlist.xhtml">All Products</a> <br />
+			</p>
+			<p align="center">
+			<a href="/Yigit_Kucukcinar_Hw2/categorylist.xhtml">All Categories</a> <br />
+			</p>
+			<p align="center">
+			<a href="/Yigit_Kucukcinar_Hw2/product.xhtml">Main Page</a> <br />
+			</p>
+		</h:form>
+</body> 
+</html>

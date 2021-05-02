@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+<h:form>
+	<p align="center">
+	<h:selectOneMenu value="#{productListBean.categoryId}">
+	<f:selectItems value="#{productListBean.allCategories}" var = "category" itemValue="#{category.id}" itemLabel="#{category.name}"/>
+	</h:selectOneMenu>
+	<h:commandButton value = "Filter" action = "#{productListBean.getAllProductsByCategory()}" /> 
+
+	<h:dataTable var="product" value="#{productListBean.products}">
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			<h:outputText value="#{product.name}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Price</f:facet>
+			<h:outputText value="#{product.price}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Stock</f:facet>
+			<h:outputText value="#{product.stock}" />
+		</h:column>
+	</h:dataTable>
+	</p>
+	<br/>
+	<p align="center">   <a href="product.xhtml">Main Page</a> <br /></p>
+	<p align="center">
+	<a href="productlist.xhtml">All Products</a>
+	</p>
+	
+	<br/>
+
+</h:form>
+</body> 
+</html>

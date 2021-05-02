@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+
+<body> 
+<form action="">
+	<h1 align="center">All Categories</h1>
+	<table cellpadding="2" cellspacing="2" border="2" align="center">
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+		<h:form>
+			<ui:repeat var="category" value="#{categoryListBean.categories}">
+				<tr>
+					<td>#{category.name}</td>
+					<td>#{category.description}</td>
+					<td><h:commandButton action="#{categoryBean.updateCategoryId(category.id)}" value="Update" /></td>
+				</tr>
+			</ui:repeat>
+		</h:form>
+	</table>
+	<p align="center">
+	<a href="/Yigit_Kucukcinar_Hw2/secure/addcategory.xhtml">Add Category</a> <br /><br />
+	</p>
+	<p align="center">
+	<a href="productlist2.xhtml">Choose Product by Category</a> <br /><br />
+	</p>
+	<p align="center">
+	<a href="product.xhtml">Main Page</a> <br /><br />
+	</p>
+	</form>
+</body> 
+</html>

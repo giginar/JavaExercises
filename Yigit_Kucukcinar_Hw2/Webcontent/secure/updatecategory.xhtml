@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<body>
+	<h:form>
+		<h1 align="center">Update Category</h1>
+		<table cellpadding="2" cellspacing="2" border="2" align="center">
+			<tr>
+				<td>Category Name</td>
+				<td><h:inputText value="#{categoryBean.nameToUpdate}" /></td>
+			</tr>
+			<tr>
+				<td>Category Description</td>
+				<td><h:inputText value="#{categoryBean.descriptionToUpdate}" /></td>
+			</tr>
+		</table>
+		<p align="center">
+			<h:commandButton action="#{categoryBean.updateCategory()}"
+				value="Save" />
+		</p>
+		<p align="center">
+			<h:commandButton action="#{categoryBean.deleteCategory(categoryBean.idToUpdate)}"
+				value="Delete" />
+		</p>
+	</h:form>
+</body>
+</html>
